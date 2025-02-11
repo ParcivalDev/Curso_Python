@@ -2,7 +2,7 @@
 #              Retos
 # ------------------------------------
 
-""" 
+"""
 # 1 EL FAMOSO "FIZZ BUZZ"
 Escribe un programa que muestre por consola (con un print) los
 números de 1 a 100 (ambos incluidos y con un salto de línea entre
@@ -88,7 +88,7 @@ print(anagrama("hola", "adios"))  # False
 #         return False
 
 
-""" 
+"""
 # 3 LA SUCESIÓN DE FIBONACCI
 Escribe un programa que imprima los 50 primeros números de la sucesión de Fibonacci empezando en 0.
 - La serie Fibonacci se compone por una sucesión de números en
@@ -107,33 +107,89 @@ for i in range(50):
     b = original + b
 
 
-# """ 
-# # 4 ¿ES UN NÚMERO PRIMO?
-# Escribe un programa que se encargue de comprobar si un número es o no primo.
-# Hecho esto, imprime los números primos entre 1 y 100.
-# """
-# print("\n***********************")
-# print('4 ¿ES UN NÚMERO PRIMO?')
-# print("***********************")
+"""
+# 4 ¿ES UN NÚMERO PRIMO?
+Escribe un programa que se encargue de comprobar si un número es o no primo.
+Hecho esto, imprime los números primos entre 1 y 100.
+"""
+print("\n***********************")
+print('4 ¿ES UN NÚMERO PRIMO?')
+print("***********************")
 
 
-# def primo(num):
-#     for n in range(2, num):
-#         if num % n == 0:
-#             print("No es primo", n, "es divisor")
-#             return False
-#     print("Es primo")
-#     return True
+def primo():
+    for num in range(101):
+        if num >= 2:
+            divisible = False
+            for n in range(2, num):
+                if num % n == 0:
+                    divisible = True
+                    break
+            if not divisible:
+                print(num)
 
-# print(primo(2))
-# print(primo(3))
-# print(primo(5))
-# print(primo(7))
-# print(primo(11))
-# print("*****")
-# print(primo(1))
-# print(primo(4))
-# print(primo(6))
-# print(primo(8))
-# print(primo(9))
-# print(primo(10))
+
+primo()
+
+
+""" 
+# 5 ÁREA DE UN POLÍGONO
+Crea una única función (importante que sólo sea una) que sea capaz de calcular y retornar el área de un polígono.
+- La función recibirá por parámetro sólo UN polígono a la vez.
+- Los polígonos soportados serán Triángulo, Cuadrado y Rectángulo.
+- Imprime el cálculo del área de un polígono de cada tipo.
+"""
+print("\n***********************")
+print('5 ÁREA DE UN POLÍGONO')
+print("***********************")
+
+
+def calcularArea(poligono):
+    if poligono == "triángulo":
+        print("\nÁREA TRIÁNGULO")
+        b = int(input("Introduce la base: "))
+        a = int(input("Introduce la altura: "))
+        return f"El área del triángulo es de {(b*a)/2}"
+
+    elif poligono == "cuadrado":
+        print("\nÁREA CUADRADO")
+        lado = int(input("Introduce el lado: "))
+        return f"El área del cuadrado es de {lado**2}"
+
+    elif poligono == "rectángulo":
+        print("\nÁREA RECTÁNGULO")
+        an = int(input("Introduce el ancho: "))
+        la = int(input("Introduce el largo: "))
+        return f"El área del rectángulo es de {an*la}"
+
+
+# print(calcularArea("triángulo"))
+# print(calcularArea("cuadrado"))
+# print(calcularArea("rectángulo"))
+
+
+
+""" 
+# 7 INVIRTIENDO CADENAS
+Crea un programa que invierta el orden de una cadena de texto sin usar funciones propias del lenguaje que lo hagan de forma automática.
+- Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+"""
+print("\n***********************")
+print('7 INVIRTIENDO CADENAS')
+print("***********************")
+
+palabra = "Hola mundo"
+palabra2 = ""
+
+# for i in palabra[::-1]:
+#     palabra2 += i
+    
+# print(palabra2)
+
+# len -1 para obtener la última posición
+# que pare en el -1 para incluír el índice 0
+# los pasos son de -1
+for i in range(len(palabra)-1, -1, -1):
+    palabra2 += palabra[i]
+print(palabra2)
+
