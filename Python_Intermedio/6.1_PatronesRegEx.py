@@ -24,6 +24,38 @@
 # # ──────────────────────────────────────────────────────────────────────────────
 
 
+import re
+
+texto = "Esta es la lección número 6: Lección llamada Expresiones Regulares"
+texto2 = "lección número 6: Lección llamada Expresiones Regulares"
+
+# patron = r"[lL]ección"  # ['lección']
+# print(re.match(patron, texto2).group())
+
+# patron = r"[0-9]"  # ['6']
+# print(re.findall(patron, texto))
+
+# patron = r"[eE]sta"  # Esta
+# print(re.match(patron, texto).group())
+
+# # Detiene la búsqueda en la primera coincidencia de "ón", en lugar de continuar hasta la última posible.
+# patron = r"[lL].*?ón"  # ['la lección', 'Lección']
+# print(re.findall(patron, texto))
+
+# # Muestra todas las letras sin incluír el número 6.
+# # Con \d mostraría solo el 6
+# patron = r"\D"  # ['E', 's', 't', 'a', ' ', 'e', 's'....]
+# print(re.findall(patron, texto))
+
+# Captura palabras que contengan l o L en cualquier parte
+patron = r"\w*[lL]\w*"  # ['la', 'lección', 'Lección', 'llamada', 'Regulares']
+print(re.findall(patron, texto))
+
+# Captura solo la l/L y el siguiente caracter
+patron = r"[lL]."  # ['la', 'le', 'Le', 'll', 'la']
+print(re.findall(patron, texto))
+
+
 
 
 
