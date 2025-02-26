@@ -55,7 +55,16 @@ print(re.findall(patron, texto))
 patron = r"[lL]."  # ['la', 'le', 'Le', 'll', 'la']
 print(re.findall(patron, texto))
 
-
+"""
+^   Inicio de cadena
+[a-zA-Z0-9_.+-]+    Permite letras, números y caracteres espciales. El +    final indica que tiene que tener al menos un carácter.
+@   Obliga a que tenga un "@"
+[a-zA-Z0-9-]    Permite letras, números y guiones. Uno o más caracteres
+\.  Representa un "." literal
+[a-zA-Z0-0-.]+    Permite letras, números, guiones y puntos (co.uk)
+$   Asegura que sea el fin de la cadena
+"""
+patronMail = r"^[a-zA-Z0-9]+[_.+-]*@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
 
 
 
