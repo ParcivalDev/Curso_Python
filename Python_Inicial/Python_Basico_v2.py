@@ -312,7 +312,7 @@ abrirArchivo("hola.txt")
 # ------------------------------------
 import math  # Importar todo el módulo
 from math import pi as PI_VALUE  # Importar solo pi dándole un nuevo nombre
-from Funcion import suma
+from Operaciones import suma
 
 suma(10, 4)  # Esto es una función que está en el archivo Funcion.py
 
