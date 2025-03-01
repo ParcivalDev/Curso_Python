@@ -46,27 +46,27 @@ Esta sección incluye:
 
 | **Concepto**         | **Qué hace**                                   | **Cuándo usarlo**                          | **Ejemplo**                          |
 |-----------------------|------------------------------------------------|--------------------------------------------|--------------------------------------|
-| **Variables** 🗃️     | Almacena datos (números, texto, etc.)         | Guardar valores para usar después          | `nombre = "Ana"` <br> `edad = 25`   |
-| **Operadores** ➕     | Realiza cálculos o comparaciones              | Matemáticas o lógica                       | `5 + 3` → `8` <br> `10 > 7` → `True` |
-| **Strings** ✏️       | Maneja texto                                  | Mostrar mensajes o manipular texto         | `"Hola" + " Mundo"` → `"Hola Mundo"` <br> `"Python".upper()` → `"PYTHON"` |
-| **Listas** 📋        | Colección ordenada y mutable                  | Datos que cambian o necesitan orden        | `[1, 2, 3]` → `[1, 2, 3, 4]` (con `.append(4)`) <br> `[0, 1, 2][1]` → `1` |
-| **Tuplas** 🔒        | Colección ordenada e inmutable                | Datos fijos que no cambiarán               | `(1, 2, 3)` <br> `(10, "hola")[0]` → `10` |
-| **Sets** 🧮          | Colección no ordenada sin duplicados          | Eliminar repeticiones o buscar elementos   | `{1, 2, 2, 3}` → `{1, 2, 3}` <br> `3 in {1, 2, 3}` → `True` |
-| **Diccionarios** 🔑  | Almacena pares clave-valor                    | Relacionar datos (como un diccionario real)| `{"nombre": "Ana", "edad": 25}` <br> `d["edad"]` → `25` |
-| **Condicionales** ❓  | Toma decisiones según condiciones             | Ejecutar código según casos                | `if edad >= 18: print("Mayor")` <br> `if 5 > 3 else "No"` → `"Sí"` |
-| **Bucles** 🔄        | Repite código automáticamente                 | Iterar listas o repetir tareas            | `for i in range(5): print(i)` → `0 1 2 3 4` <br> `while x < 3: x += 1` |
-| **Funciones** 🔧     | Reutiliza bloques de código                   | Evitar repetir lógica                      | `def suma(a, b): return a + b` → `suma(2, 3)` → `5` <br> `len("hola")` → `4` |
-| **Clases** 🏛️       | Define objetos con propiedades y métodos      | Modelar cosas reales (POO)                 | `class Perro: def ladrar(self): print("Guau")` <br> `p = Perro(); p.ladrar()` → `"Guau"` |
-| **Excepciones** ⚠️   | Maneja errores sin que el programa falle      | Evitar crashes por entradas inesperadas    | `try: 5/0 except: print("Error")` → `"Error"` <br> `try: int("a") except ValueError: print("No")` → `"No"` |
-| **Módulos** 📦       | Organiza código en archivos separados         | Proyectos grandes o reutilización          | `import math; math.pi` → `3.14...` <br> `from datetime import datetime` |
+| **Variables** 🗃️     | Almacena datos (números, texto, etc.)         | Guardar valores para usar después          | `nombre = "Ana", edad = 25`         |
+| **Operadores** ➕     | Realiza cálculos o comparaciones              | Matemáticas o lógica                       | `5 + 3` → `8`, `10 > 7` → `True`    |
+| **Strings** ✏️       | Maneja texto                                  | Mostrar mensajes o manipular texto         | `"Hola" + " Mundo"` → `"Hola Mundo"`, `"Python".upper()` → `"PYTHON"` |
+| **Listas** 📋        | Colección ordenada y mutable                  | Datos que cambian o necesitan orden        | `[1, 2, 3]` → `[1, 2, 3, 4]` (con `.append(4)`), `[0, 1, 2][1]` → `1` |
+| **Tuplas** 🔒        | Colección ordenada e inmutable                | Datos fijos que no cambiarán               | `(1, 2, 3)`, `(10, "hola")[0]` → `10` |
+| **Sets** 🧮          | Colección no ordenada sin duplicados          | Eliminar repeticiones o buscar elementos   | `{1, 2, 2, 3}` → `{1, 2, 3}`, `3 in {1, 2, 3}` → `True` |
+| **Diccionarios** 🔑  | Almacena pares clave-valor                    | Relacionar datos (como un diccionario real)| `{"nombre": "Ana", "edad": 25}`, `d["edad"]` → `25` |
+| **Condicionales** ❓  | Toma decisiones según condiciones             | Ejecutar código según casos                | `if edad >= 18: print("Mayor")`, `if 5 > 3 else "No"` → `"Sí"` |
+| **Bucles** 🔄        | Repite código automáticamente                 | Iterar listas o repetir tareas            | `for i in range(5): print(i)` → `0 1 2 3 4`, `while x < 3: x += 1` |
+| **Funciones** 🔧     | Reutiliza bloques de código                   | Evitar repetir lógica                      | `def suma(a, b): return a + b` → `suma(2, 3)` → `5`, `len("hola")` → `4` |
+| **Clases** 🏛️       | Define objetos con propiedades y métodos      | Modelar cosas reales (POO)                 | `class Perro: def ladrar(self): print("Guau")`, `p = Perro(); p.ladrar()` → `"Guau"` |
+| **Excepciones** ⚠️   | Maneja errores sin que el programa falle      | Evitar crashes por entradas inesperadas    | `try: 5/0 except: print("Error")` → `"Error"`, `try: int("a") except ValueError: print("No")` → `"No"` |
+| **Módulos** 📦       | Organiza código en archivos separados         | Proyectos grandes o reutilización          | `import math; math.pi` → `3.14...`, `from datetime import datetime` |
 
 ### Python Intermedio 🌟
 
 | **Concepto**              | **Qué hace**                                   | **Cuándo usarlo**                          | **Ejemplo**                          |
 |---------------------------|------------------------------------------------|--------------------------------------------|--------------------------------------|
-| **Fechas y horas** ⏳     | Trabaja con fechas y tiempo                   | Calcular diferencias o mostrar fechas      | `datetime.now()` → `2025-03-01...` <br> `datetime(2023, 1, 1).year` → `2023` |
-| **List Comprehension** 📏 | Crea listas de forma rápida y elegante        | Simplificar bucles en una línea            | `[x*2 for x in range(5)]` → `[0, 2, 4, 6, 8]` <br> `[x for x in "hola" if x != "o"]` → `["h", "l", "a"]` |
-| **Lambdas** ⚡            | Funciones anónimas cortas                     | Operaciones rápidas sin nombre            | `lambda x: x+1` → `2` (si x=1) <br> `list(map(lambda x: x*2, [1, 2]))` → `[2, 4]` |
-| **Ficheros** 📜          | Lee o escribe en archivos (txt, JSON, CSV)    | Guardar o cargar datos                     | `with open("file.txt", "r") as f: f.read()` <br> `json.dump({"a": 1}, open("data.json", "w"))` |
-| **Expresiones regulares** 🔍 | Busca y manipula patrones en texto         | Validar emails, teléfonos, etc.            | `re.findall(r"\d+", "a123b")` → `["123"]` <br> `re.sub(r"o", "0", "hola")` → `"h0la"` |
-| **Paquetes** 📚          | Usa librerías externas como NumPy o Requests  | Proyectos avanzados o APIs                 | `import numpy; numpy.array([1, 2])` → `[1 2]` <br> `requests.get("url").json()` |
+| **Fechas y horas** ⏳     | Trabaja con fechas y tiempo                   | Calcular diferencias o mostrar fechas      | `datetime.now()` → `2025-03-01`, `datetime(2023, 1, 1).year` → `2023` |
+| **List Comprehension** 📏 | Crea listas de forma rápida y elegante        | Simplificar bucles en una línea            | `[x*2 for x in range(5)]` → `[0, 2, 4, 6, 8]`, `[x for x in "hola" if x != "o"]` → `["h", "l", "a"]` |
+| **Lambdas** ⚡            | Funciones anónimas cortas                     | Operaciones rápidas sin nombre            | `lambda x: x+1` → `2` (si x=1), `list(map(lambda x: x*2, [1, 2]))` → `[2, 4]` |
+| **Ficheros** 📜          | Lee o escribe en archivos (txt, JSON, CSV)    | Guardar o cargar datos                     | `with open("file.txt", "r") as f: f.read()`, `json.dump({"a": 1}, open("data.json", "w"))` |
+| **Expresiones regulares** 🔍 | Busca y manipula patrones en texto         | Validar emails, teléfonos, etc.            | `re.findall(r"\d+", "a123b")` → `["123"]`, `re.sub(r"o", "0", "hola")` → `"h0la"` |
+| **Paquetes** 📚          | Usa librerías externas como NumPy o Requests  | Proyectos avanzados o APIs                 | `import numpy; numpy.array([1, 2])`, `requests.get("url").json()` |
