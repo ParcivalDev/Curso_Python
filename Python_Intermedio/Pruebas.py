@@ -58,3 +58,17 @@
 # except ValueError:
 #     print("Error: Debes introducir un número válido.")
 # print("Registro actualizado:", registro)
+
+# # Recorrer un diccionario
+# dicc = {"uno": 1, "dos": 2, "tres": 3}
+# for x in dicc.values():
+#     print(x) # 1 2 3
+
+# for x in dicc:
+#     print(x) # uno dos tres
+
+# for x in dicc:
+#     print(dicc[x]) # 1 2 3
+    
+# for x in dicc.items():
+#     print(x) # ('uno', 1) ('dos', 2) ('tres', 3)
