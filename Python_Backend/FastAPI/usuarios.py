@@ -25,6 +25,15 @@ lista_usuarios = [
 # 127.0.0.1:8000/usuarios
 
 
+# Función para buscar usuarios
+def buscar_usuario(id: int):
+    usuarios = filter(lambda usuario: usuario.id == id, lista_usuarios)
+    try:
+        return list(usuarios)[0]
+    except:
+        return {"mensaje": "Usuario no encontrado"}
+
+
 # 📌 GET: Devuelve la lista de usuarios
 @app.get("/usuarios")
 async def usuarios():
@@ -50,15 +59,6 @@ async def usuario(id: int):  # Poner int para que espere un entero y funcione
 @app.get("/usuarioquery/")
 async def usuario(id: int):
     return buscar_usuario(id)
-
-
-# Función para buscar usuarios
-def buscar_usuario(id: int):
-    usuarios = filter(lambda usuario: usuario.id == id, lista_usuarios)
-    try:
-        return list(usuarios)[0]
-    except:
-        return {"mensaje": "Usuario no encontrado"}
 
 
 # 📌 POST: Agrega un nuevo usuario
@@ -99,3 +99,15 @@ async def modificar(id: int, usuario_mod: Usuario):
         "mensaje": "Usuario actualizado con éxito",
         "usuario": usuario
     }
+
+
+# 📌 DELETE: Elimina un usuario
+# 127.0.0.1:8000/borrar/2
+@app.delete("/borrar/{id}")
+async def eliminar(id: int):
+    usuario = buscar_usuario(id)
+    if isinstance(usuario, dict):  # Si no se encontró el usuario
+        return usuario
+
+    lista_usuarios.remove(usuario)
+    return {"mensaje": f"Usuario con ID {id} eliminado con éxito"}
