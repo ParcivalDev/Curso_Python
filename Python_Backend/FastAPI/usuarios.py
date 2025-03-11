@@ -111,3 +111,6 @@ async def eliminar(id: int):
 
     lista_usuarios.remove(usuario)
     return {"mensaje": f"Usuario con ID {id} eliminado con éxito"}
+
+
+# Hola desde rama nueva
