@@ -13,7 +13,7 @@ class Animal:
 
 class Perro(Animal):
     def hacer_sonido(self):
-        print("Guau guau")
+        print("Guau guau") 
 
     def dormir(self):
         print("Perro: ZzZzZzZzZ")
