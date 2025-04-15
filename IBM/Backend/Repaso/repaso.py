@@ -43,3 +43,14 @@ print(pares)  # [2, 4]
 num_desordenados = [4, 6, 2, 76, 1, 54, 23]
 num_ordenados = sorted(num_desordenados)
 print(num_ordenados)  # [1, 2, 4, 6, 23, 54, 76]
+
+
+# Ordenar un diccionario por clave
+empleados_dict = [
+    {"nombre": "Manuel", "edad": 33},
+    {"nombre": "Sara", "edad": 44},
+    {"nombre": "Paula", "edad": 36}
+]
+
+empleados_ordenados = sorted(empleados_dict, key=lambda x: x["edad"])
+print(empleados_ordenados)
