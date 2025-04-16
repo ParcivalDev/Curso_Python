@@ -35,7 +35,6 @@ Un decorador es simplemente una función que recibe otra función y devuelve una
 # saludar("Pepe")
 
 
-
 def requiere_admin(func):
     def wrapper(usuario, *args, **kwargs):
         if usuario != "admin":
@@ -44,9 +43,11 @@ def requiere_admin(func):
         return func(usuario, *args, **kwargs)
     return wrapper
 
+
 @requiere_admin
 def eliminar_usuario(usuario, nombre):
     print(f"{nombre} ha sido eliminado por {usuario}")
+
 
 print("Intento 1: ", end="")
 eliminar_usuario("juan", "Marcos")

@@ -54,3 +54,16 @@ empleados_dict = [
 
 empleados_ordenados = sorted(empleados_dict, key=lambda x: x["edad"])
 print(empleados_ordenados)
+
+
+# sum()
+resultado = sum(num_desordenados)
+print(resultado)  # 166
+
+resultado = sum(num_desordenados, 1000)
+print(resultado)  # 1166
+
+
+# next()
+iterador = iter(num_desordenados)
+print(next(iterador, "Fin"))
