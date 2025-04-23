@@ -2,6 +2,8 @@ from mysql.connector import Error
 from mysql.connector import pooling
 
 # Clase que gestiona la conexión a la base de datos mediante un pool
+
+
 class Conexion:
     # Configuración de conexión (constantes de clase)
     DATABASE = "zona_fit_db"
@@ -53,14 +55,14 @@ class Conexion:
         conexion.close()
 
 
-# Esto se ejecuta solo si el archivo se corre directamente (no si se importa desde otro script)
-if __name__ == '__main__':
-    pool = Conexion.obtener_pool()  # Obtenemos el pool
-    print(pool)
+# # Esto se ejecuta solo si el archivo se corre directamente (no si se importa desde otro script)
+# if __name__ == '__main__':
+#     pool = Conexion.obtener_pool()  # Obtenemos el pool
+#     print(pool)
 
-    conexion = Conexion.obtener_conexion()  # Obtenemos una conexión desde el pool
-    if conexion:
-        print("Conexión obtenida correctamente.")
-        Conexion.cerrar_conexion(conexion)  # Cerramos la conexión
-    else:
-        print("No se pudo obtener una conexión.")
+#     conexion = Conexion.obtener_conexion()  # Obtenemos una conexión desde el pool
+#     if conexion:
+#         print("Conexión obtenida correctamente.")
+#         Conexion.cerrar_conexion(conexion)  # Cerramos la conexión
+#     else:
+#         print("No se pudo obtener una conexión.")
