@@ -84,7 +84,7 @@ class ClienteDAO:
                 cursor.close()
                 Conexion.cerrar_conexion(conexion)
 
-
+# Prueba de la clase ClienteDAO
 if __name__ == "__main__":
     # Insertar un nuevo cliente
     nuevo_cliente = Cliente(nombre="Paco", apellido="Gonzalez", membresia=400)
