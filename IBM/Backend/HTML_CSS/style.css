@@ -1,0 +1,12 @@
+h3{
+    color : blue;
+    font-size: 24px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+}
+body{
+    background-color: black;
+    color: white;
+}
