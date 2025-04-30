@@ -22,6 +22,7 @@ print(cadena.strip())
 
 # Lambda argumentos: expresión
 def suma(num1, num2):
+    """Comentario interior"""
     return num1 + num2
 
 # resultado = lambda num1, num2: num1 + num2
@@ -67,3 +68,24 @@ print(resultado)  # 1166
 # next()
 iterador = iter(num_desordenados)
 print(next(iterador, "Fin"))
+
+
+
+# Sin compresión de listas
+cuadrados = []
+for x in range(1,6):
+    cuadrados.append(x**2)
+print(cuadrados) 
+
+# Con compresión de listas
+cuadrados = [x**2 for x in range(1,6)]
+print(cuadrados)
+    
+    
+    
+pares = [x for x in range(1,7) if x % 2 == 0]
+print(pares)
+
+clasificacion = [f"par: {x}" if x%2==0 else f"impar: {x}" for x in range(5)]
+print(clasificacion)
+
